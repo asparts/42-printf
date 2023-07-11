@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/29 11:44:46 by mnummi            #+#    #+#             */
-/*   Updated: 2023/06/29 11:59:49 by mnummi           ###   ########.fr       */
+/*   Created: 2023/07/12 00:43:55 by mnummi            #+#    #+#             */
+/*   Updated: 2023/07/12 00:43:58 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(void)
+void	ft_putstr(char *str)
 {
-	//ft_printf("test");
-	return 0;
-}
+	int	i;
 
-int	ft_printf(char *format, ...)
-{
-
-	char	*traverse;
-	char	*s;
-	va_list	args;
-
-	va_start(args, format);
-	traverse = format;
-	while (*traverse != '\0')
+	i = 0;
+	while(str[i])
 	{
-		while (*traverse != '%')
-		{
-			ft_putchar(*traverse);
-			traverse++;
-		}
-		traverse++;
-		ft_print_args(traverse, args);
+		ft_putchar(str[i]);
+		i++;
 	}
-	va_end(args);
 }
