@@ -11,3 +11,21 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void    ft_print_int(int n)
+{
+    long int nbr;
+    
+    nbr = n;
+    if (n < 0)
+    {
+        ft_putchar('-');
+    }
+    if (n < 10)
+        ft_putchar(n + '0');
+    else
+    {
+        ft_print_int(n / 10);
+        ft_putchar(n % 10 + '0');
+    }
+}
