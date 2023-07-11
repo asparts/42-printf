@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-char *convert(unsigned int num, int base)
+//converting to hex
+char *ft_convert(unsigned int num, int base)
 {
 	char	representation[16];
 	char	buffer[50];

@@ -6,23 +6,16 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 11:44:46 by mnummi            #+#    #+#             */
-/*   Updated: 2023/06/29 11:59:49 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/12 01:42:00 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(void)
-{
-	//ft_printf("test");
-	return 0;
-}
-
 int	ft_printf(char *format, ...)
 {
 
 	char	*traverse;
-	char	*s;
 	va_list	args;
 
 	va_start(args, format);
@@ -38,4 +31,5 @@ int	ft_printf(char *format, ...)
 		ft_print_args(traverse, args);
 	}
 	va_end(args);
+	return (0);
 }
