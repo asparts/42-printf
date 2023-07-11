@@ -23,8 +23,8 @@ void	ft_print_args(char *traverse, va_list args)
 		case 'c' :
 			ft_putchar(va_arg(args, int));
 			break;
-		case 's' : s = va_arg(args, char*);
-			ft_putstr(s);
+		case 's' :
+			ft_putstr(va_arg(args, char*));
 			break ;
          case 'p' :
             ft_print_ptr();
