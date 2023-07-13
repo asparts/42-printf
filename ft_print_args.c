@@ -14,7 +14,6 @@
 
 void	ft_print_args(char *traverse, va_list args)
 {
-	char		*s;
 	unsigned int	i;
 
     i = 1;

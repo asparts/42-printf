@@ -28,6 +28,7 @@ int	ft_printf(const char *format, ...)
 			traverse++;
 		}
 		traverse++;
+		traverse++;
 		ft_print_args(traverse, args); //When you encounter a %, there is a variable to print.
 	}
 	va_end(args); //va_end macro performs cleanup for an ap object initialized by a call to va_start or va_copy.

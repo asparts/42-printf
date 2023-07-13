@@ -11,11 +11,12 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
+// to print %i & %d
 void    ft_print_int(int n)
 {
-    long int nbr;
+    int nbr;
     
+    nbr = 0;
     nbr = n;
     if (n < 0)
     {
