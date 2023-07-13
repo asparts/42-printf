@@ -27,22 +27,22 @@ void	ft_print_args(char *traverse, va_list args)
 			ft_putstr(va_arg(args, char*));
 			break ;
          case 'p' :
-            ft_print_ptr();
+            ft_print_ptr(va_arg(args, void*));
 			break ;
         case 'd' :
-            ft_print_decimal();
+            ft_print_int(va_arg(args, int));
 			break ;
         case 'i' :
-            ft_print_int();
+            ft_print_int(va_arg(args, int));
 			break ;
         case 'u' :
-            ft_print_unsigned();
+            ft_print_unsigned(va_arg(args, unsigned));
 			break ;
 		case 'x' : 
-			ft_print_hex();
+			ft_print_hex((va_arg(args, int)), 1);
 			break ;
         case 'X' : 
-			ft_print_hex();
+			ft_print_hex((va_arg(args, int)), 0);
 			break ;
 		case '%' : ft_putchar('%');
 			break ;

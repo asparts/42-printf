@@ -16,20 +16,20 @@ int	ft_printf(char *format, ...)
 {
 
 	char	*traverse;
-	va_list	args;
+	va_list	args; //holds the information needed by va_start, va_arg, va_end, and va_copy, not sure if I can use it though
 
 	va_start(args, format);
 	traverse = format;
 	while (*traverse != '\0')
 	{
-		while (*traverse != '%')
+		while (*traverse != '%') //oop through a string and will evaluate it. As long as the string is not a %, keep printing what you read.
 		{
 			ft_putchar(*traverse);
 			traverse++;
 		}
 		traverse++;
-		ft_print_args(traverse, args);
+		ft_print_args(traverse, args); //When you encounter a %, there is a variable to print.
 	}
-	va_end(args);
+	va_end(args); //va_end macro performs cleanup for an ap object initialized by a call to va_start or va_copy.
 	return (0);
 }

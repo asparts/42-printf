@@ -41,7 +41,7 @@ void    ft_print_ptr(void *p)
     tmp[1] = lo;
     ptr = &p;
     i = sizeof(ptr) - 1;
-    ft_memcpy(buf, &ptr, sizeof(ptr)); //TODO:
+    ft_memcpy(buf, &ptr, sizeof(ptr)); //TODO: comments for below while
     while (i >=0)
     {
 
