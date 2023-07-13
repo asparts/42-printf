@@ -11,4 +11,14 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+// for printing %x and %X
+void	ft_print_hex(int num, int lowercase)
+{
+    char    *str;
 
+    if (lowercase == 1)
+        str = ft_convert(num, 16, 1);
+    else
+        str = ft_convert(num, 16, 0);
+    ft_putstr(str);
+}

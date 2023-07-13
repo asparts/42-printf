@@ -22,11 +22,11 @@ int     ft_printf(char *format, ...);
 void	ft_putchar(char c); // %c and %%
 void	ft_putstr(char *str); // %s
 void	ft_print_args(char *traverse, va_list args);
-char*	ft_convert(unsigned int num, int base);
+char*	ft_convert(unsigned int num, int base, int lowercase);
 char*	ft_strcpy(char* dest, char* src);
 void	ft_print_int(); // %i
 void	ft_print_ptr(); // %p
 void	ft_print_unsigned(); // %u
-void	ft_print_hex(); // %x and %X
+void	ft_print_hex(int num, int lowercase); // %x and %X
 void	ft_print_decimal(); // %d
 #endif
