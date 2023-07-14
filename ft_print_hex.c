@@ -12,13 +12,16 @@
 
 #include "ft_printf.h"
 // for printing %x and %X
-void	ft_print_hex(int num, int lowercase)
+int	ft_print_hex(int num, int lowercase)
 {
     char    *str;
+    int     len;
 
+    len = 0;
     if (lowercase == 1)
         str = ft_convert(num, 16, 1);
     else
         str = ft_convert(num, 16, 0);
-    ft_putstr(str);
+    len += ft_putstr(str);
+    return (len);
 }

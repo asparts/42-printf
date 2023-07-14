@@ -19,14 +19,15 @@
 #include <stdarg.h>
 
 int     ft_printf(const char *format, ...);
-void	ft_putchar(char c); // %c and %%
-void	ft_putstr(char *str); // %s
-void	ft_print_args(char *traverse, va_list args);
+int	    ft_putchar(char c); // %c and %%
+int	    ft_putstr(char *str); // %s
+int 	ft_print_args(char c, va_list args);
 char*	ft_convert(unsigned int num, int base, int lowercase);
-char*	ft_strcpy(char* dest, char* src);
+char*	ft_strcpy(char* dest, const char* src);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	ft_print_int(int n); // %i & %d
+int 	ft_print_int(int n); // %i & %d
 void	ft_print_ptr(void *p); // %p
-void	ft_print_unsigned(unsigned u); // %u
-void	ft_print_hex(int num, int lowercase); // %x and %X
+long int	    ft_print_unsigned(long int u); // %u
+int	ft_print_hex(int num, int lowercase); // %x and %X
+size_t	ft_strlen(const char *str);
 #endif

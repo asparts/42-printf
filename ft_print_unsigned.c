@@ -13,40 +13,35 @@
 #include "ft_printf.h"
 // %u
 
-void	ft_print_unsigned(unsigned u)
+long int	ft_print_unsigned(long int u)
 {
-    char    *str;
-    int     integers;
-    int     precision;
-    int     i;
-    int     j;
+    // long int x;
+    // int len;
+    // x = 4294967296;
+    // len = 0;
+    // if (u < 0)
+    // {
+    //     x = x - u;
+    //     len = ft_print_int(x);
+    // }
+    // else
+    //     len = ft_print_int(u);
+    long int nbr;
+    int len;
 
-    str = u;
-    integers = 0;
-    precision = 0;
-    i = 0;
-    j = 0;
-    while (str[i] != '.')
+    nbr = 0;
+    nbr = u;
+    len = 0;
+    if (u < 0)
     {
-        integers++;
-        i++;
+        len += ft_putchar('-');
     }
-    while (str[i])
+    if (u < 10)
+        len += ft_putchar(u + '0');
+    else
     {
-        precision++;
-        i++;
+        len += ft_print_int(u / 10);
+        len += ft_putchar(u % 10 + '0');
     }
-    i = 0;
-    while (i < integers)
-    {
-        ft_putchar(str[i]);
-        i++;
-    }
-    ft_putchar('.');
-    while (j < precision)
-    {
-        ft_putchar(str[i]);
-        i++;
-        j++;
-    }
+    return (len);
 }

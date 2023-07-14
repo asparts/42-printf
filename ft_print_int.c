@@ -12,21 +12,24 @@
 
 #include "ft_printf.h"
 // to print %i & %d
-void    ft_print_int(int n)
+int    ft_print_int(int n)
 {
-    int nbr;
-    
-    nbr = 0;
+    int len;
+    long int nbr; // to handle int_MIN / -2147483648
+
+    len = 0;
     nbr = n;
-    if (n < 0)
+    if (nbr < 0)
     {
-        ft_putchar('-');
+        len += ft_putchar('-');
+        nbr = nbr * -1;
     }
-    if (n < 10)
-        ft_putchar(n + '0');
+    if (nbr < 10)
+        len += ft_putchar(nbr + '0');
     else
     {
-        ft_print_int(n / 10);
-        ft_putchar(n % 10 + '0');
+        len += ft_print_int(nbr / 10);
+        len += ft_putchar(nbr % 10 + '0');
     }
+    return (len);
 }

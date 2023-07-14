@@ -12,38 +12,41 @@
 
 #include "ft_printf.h"
 
-void	ft_print_args(char *traverse, va_list args)
+int	ft_print_args(char c, va_list args)
 {
 	unsigned int	i;
 
     i = 1;
-	switch (*traverse)
+	switch (c)
 	{
 		case 'c' :
-			ft_putchar(va_arg(args, int));
+			return(ft_putchar(va_arg(args, int)));
 			break;
 		case 's' :
-			ft_putstr(va_arg(args, char*));
+			return(ft_putstr(va_arg(args, char*)));
 			break ;
          case 'p' :
             ft_print_ptr(va_arg(args, void*));
 			break ;
         case 'd' :
-            ft_print_int(va_arg(args, int));
+            return (ft_print_int(va_arg(args, int)));
 			break ;
         case 'i' :
-            ft_print_int(va_arg(args, int));
+            return (ft_print_int(va_arg(args, int)));
 			break ;
         case 'u' :
-            ft_print_unsigned(va_arg(args, unsigned));
+            return (ft_print_unsigned(va_arg(args, unsigned int)));
 			break ;
 		case 'x' : 
-			ft_print_hex((va_arg(args, int)), 1);
+			return (ft_print_hex((va_arg(args, int)), 1));
 			break ;
         case 'X' : 
-			ft_print_hex((va_arg(args, int)), 0);
+			return (ft_print_hex((va_arg(args, int)), 0));
 			break ;
-		case '%' : ft_putchar('%');
+		case '%' : 
+			return (ft_putchar('%'));
 			break ;
+		default:
+			return (-1);
 	}
 }

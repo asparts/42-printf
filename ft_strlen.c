@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 00:41:57 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/12 01:42:29 by mnummi           ###   ########.fr       */
+/*   Created: 2022/10/30 21:54:33 by mnummi            #+#    #+#             */
+/*   Updated: 2023/07/04 21:54:18 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char*	ft_strcpy(char *dest, const char *src)
+size_t	ft_strlen(const char *str)
 {
-	char *ptr;
+	size_t	i;
 
-	if (!dest)
-		return (NULL);
-	ptr = dest;
-	while (*src != '\0')
+	i = 0;
+	while (*str != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		i++;
+		str++;
 	}
-	dest = '\0';
-	return (ptr);
+	return (i);
 }

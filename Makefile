@@ -1,7 +1,7 @@
 CC	=	gcc
 FLAGS	=	-Wall -Wextra -Werror
 NAME	=	libftprintf.a
-SRCS	=	ft_printf.c ft_putchr.c ft_putstr.c ft_print_args.c ft_convert.c ft_strcpy.c ft_print_int.c ft_print_hex.c ft_print_unsigned.c ft_print_ptr.c ft_memcpy.c
+SRCS	=	ft_printf.c ft_putchr.c ft_putstr.c ft_print_args.c ft_convert.c ft_strcpy.c ft_print_int.c ft_print_hex.c ft_print_unsigned.c ft_print_ptr.c ft_memcpy.c ft_strlen.c
 
 OBJS	=	${SRCS:.c=.o}
 
