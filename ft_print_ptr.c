@@ -28,34 +28,19 @@
         Thus, a=a/(2^2)=1 which can be written as 01.
         below here we right shift buf[i] >> 4
         */
-void    ft_print_ptr(void *p)
+int    ft_print_ptr(void *p)
 {
-    int     i;
-    void *ptr;
-    unsigned char   buf[sizeof(ptr)];
-    unsigned char hi;
-    unsigned char lo;
-    char tmp[2];
+    unsigned long   ptr_address;
+    int     len;
 
-    tmp[0] = hi;
-    tmp[1] = lo;
-    ptr = &p;
-    i = sizeof(ptr) - 1;
-    ft_memcpy(buf, &ptr, sizeof(ptr)); //TODO: comments for below while
-    while (i >=0)
+    len = 0;
+    if (p == NULL)
     {
-
-        hi = (buf[i] >> 4)  & 0xf;
-        lo = buf[i] & 0xf;
-        if (hi < 10)
-            tmp[0] += '0';
-        else
-            tmp[0] += 'a' -10;
-        if (lo < 10)
-            tmp[1] += '0';
-        else
-            tmp[1] += 'a' -10;
-        write(1, tmp, 2);
-        i--;
+        ft_putstr("(nil)");
+        return ;
     }
+    ptr_address = (unsigned long)p;
+    len += ft_putstr("0x");
+    len += ft_print_hex(ptr_address, 1);
+    return (len);
 }

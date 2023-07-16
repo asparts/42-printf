@@ -15,7 +15,6 @@
 int	ft_print_args(char c, va_list args)
 {
 	unsigned int	i;
-	char			*str;
 
     i = 1;
 	switch (c)
@@ -27,7 +26,7 @@ int	ft_print_args(char c, va_list args)
 			return(ft_putstr(va_arg(args, char*)));
 			break ;
          case 'p' :
-            ft_print_ptr(va_arg(args, void*));
+            return(ft_print_ptr(va_arg(args, void*)));
 			break ;
         case 'd' :
             return (ft_print_int(va_arg(args, int)));

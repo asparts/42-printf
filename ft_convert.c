@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 //converting to hex
-char *ft_convert(unsigned int num, int base, int lowercase)
+char *ft_convert(unsigned long int num, int base, int lowercase)
 {
 /*
 To convert int to hex:
@@ -43,6 +43,5 @@ Repeat steps one and two until the result of the division is 0
 		*--ptr = representation[res];
 		num = num / 16;
 	}
-	//printf("test w. printf:%s", ptr);
 	return (ptr);
 }

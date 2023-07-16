@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 // for printing %x and %X
-int	ft_print_hex(int num, int lowercase)
+int	ft_print_hex(long int num, int lowercase)
 {
     char    *str;
     int	i;

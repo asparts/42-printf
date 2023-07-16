@@ -22,12 +22,12 @@ int     ft_printf(const char *format, ...);
 int	    ft_putchar(char c); // %c and %%
 int	    ft_putstr(char *str); // %s
 int 	ft_print_args(char c, va_list args);
-char*	ft_convert(unsigned int num, int base, int lowercase);
+char*	ft_convert(unsigned long int num, int base, int lowercase);
 char*	ft_strcpy(char* dest, const char* src);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 int 	ft_print_int(int n); // %i & %d
-void	ft_print_ptr(void *p); // %p
+int	ft_print_ptr(void *p); // %p
 long int	    ft_print_unsigned(long int u); // %u
-int	ft_print_hex(int num, int lowercase); // %x and %X
+int	ft_print_hex(long int num, int lowercase); // %x and %X
 size_t	ft_strlen(const char *str);
 #endif
