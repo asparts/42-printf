@@ -15,6 +15,7 @@
 int	ft_print_args(char c, va_list args)
 {
 	unsigned int	i;
+	char			*str;
 
     i = 1;
 	switch (c)
@@ -38,10 +39,10 @@ int	ft_print_args(char c, va_list args)
             return (ft_print_unsigned(va_arg(args, unsigned int)));
 			break ;
 		case 'x' : 
-			return (ft_print_hex((va_arg(args, int)), 1));
+			return(ft_print_hex(va_arg(args, unsigned int), 1));
 			break ;
         case 'X' : 
-			return (ft_print_hex((va_arg(args, int)), 0));
+			return(ft_print_hex(va_arg(args, unsigned int), 0));
 			break ;
 		case '%' : 
 			return (ft_putchar('%'));

@@ -15,13 +15,18 @@
 int	ft_print_hex(int num, int lowercase)
 {
     char    *str;
-    int     len;
+    int	i;
 
-    len = 0;
     if (lowercase == 1)
         str = ft_convert(num, 16, 1);
     else
         str = ft_convert(num, 16, 0);
-    len += ft_putstr(str);
-    return (len);
+    //doing this printing here since couldn't get ft_putstr to work.. Gotta investigate that more later..
+	i = 0;
+	if (str == NULL)
+		return (write(1, "(null)", 6));
+	while(str[i])
+		i++;
+		return (write(1, str, i));
+
 }

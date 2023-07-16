@@ -12,6 +12,12 @@
 
 #include "ft_printf.h"
 
+// int main()
+// {
+// 	ft_printf(" %x ", 11);
+// 	return (1);
+// }
+
 int	ft_printf(const char *format, ...)
 {
 	int		i;
