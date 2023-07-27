@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 01:52:52 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/18 01:27:35 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/07/27 16:05:26 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_print_ptr(void *p)
 	if (p == NULL)
 	{
 		ft_putstr("(nil)");
-		return ;
+		return (0);
 	}
 	ptr_address = (unsigned long)p;
 	len += ft_putstr("0x");
