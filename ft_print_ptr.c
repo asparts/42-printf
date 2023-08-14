@@ -21,7 +21,7 @@ int	ft_print_ptr(void *p)
 	if (p == NULL)
 	{
 		ft_putstr("(nil)");
-		return (0);
+		return (5);
 	}
 	ptr_address = (unsigned long)p;
 	len += ft_putstr("0x");
