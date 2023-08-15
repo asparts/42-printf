@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*   ft_hex_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 01:52:52 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/27 16:05:26 by mnummi           ###   ########.fr       */
+/*   Created: 2023/08/14 21:55:24 by mnummi            #+#    #+#             */
+/*   Updated: 2023/08/14 21:56:03 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_ptr(void *p)
+int	ft_hex_len(unsigned long int num, int base)
 {
-	unsigned long long	ptr_address;
-	int				len;
+	char	*ptr;
+	char	buffer[50];
+	char	representation[16];
+	int		res;
+	int		i;
 
-	len = 0;
-	if (p == NULL)
+	ft_strcpy(representation, "0123456789ABCDEF");
+	ptr = &buffer[49];
+	*ptr = '\0';
+	i = 0;
+	if (num <= 0)
 	{
-		ft_putstr("(nil)");
-		return (5);
+		*--ptr = '0';
+		return (1);
 	}
-	ptr_address = (unsigned long long)p;
-	len += ft_putstr("0x");
-	len += ft_print_hex(ptr_address, 1);
-	return (len);
+	while (num > 0)
+	{
+		res = num % 16;
+		*--ptr = representation[res];
+		num = num / 16;
+		i++;
+	}
+	//free(ptr);
+	return (i);
 }

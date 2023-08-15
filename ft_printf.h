@@ -28,6 +28,7 @@ void		*ft_memcpy(void *dest, const void *src, size_t n);
 int			ft_print_int(int n); // %i & %d
 int			ft_print_ptr(void *p); // %p
 long int	ft_print_unsigned(long int u); // %u
-int			ft_print_hex(long int num, int lowercase); // %x and %X
+int			ft_print_hex(unsigned long int num, int lowercase); // %x and %X
 size_t		ft_strlen(const char *str);
+int	        ft_hex_len(unsigned long int num, int base);
 #endif
