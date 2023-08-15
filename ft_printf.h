@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 00:39:04 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/17 23:00:05 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/08/15 20:47:45 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ int			ft_print_ptr(void *p); // %p
 long int	ft_print_unsigned(long int u); // %u
 int			ft_print_hex(unsigned long int num, int lowercase); // %x and %X
 size_t		ft_strlen(const char *str);
-int	        ft_hex_len(unsigned long int num, int base);
+int		ft_hex_len(unsigned long int num, int base);
 #endif

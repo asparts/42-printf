@@ -6,12 +6,12 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:55:24 by mnummi            #+#    #+#             */
-/*   Updated: 2023/08/14 21:56:03 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/08/15 20:45:51 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
+// returns hex length
 int	ft_hex_len(unsigned long int num, int base)
 {
 	char	*ptr;
@@ -36,6 +36,5 @@ int	ft_hex_len(unsigned long int num, int base)
 		num = num / 16;
 		i++;
 	}
-	//free(ptr);
 	return (i);
 }
