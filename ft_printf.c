@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 	/* 
 	* va_list holds the information needed by va_start, va_arg, 
-	* va_end, and va_copy, not sure if I can use it though
+	* va_end, and va_copy
 	*/
 //if --> When you encounter a %, there is a variable to print.
 // else -- > Loop through a string. 
