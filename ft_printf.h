@@ -29,5 +29,5 @@ int			ft_print_ptr(void *p); // %p
 long int	ft_print_unsigned(long int u); // %u
 int			ft_print_hex(unsigned long int num, int lowercase); // %x and %X
 size_t		ft_strlen(const char *str);
-int			ft_hex_len(unsigned long int num, int base);
+int			ft_hex_len(unsigned long int num);
 #endif

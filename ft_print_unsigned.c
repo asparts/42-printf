@@ -15,11 +15,8 @@
 
 long int	ft_print_unsigned(long int u)
 {
-	long int	nbr;
 	int			len;
 
-	nbr = 0;
-	nbr = u;
 	len = 0;
 	if (u < 0)
 	{

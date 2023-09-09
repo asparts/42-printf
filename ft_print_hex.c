@@ -13,7 +13,6 @@
 #include "ft_printf.h"
 // for printing %x and %X
 //doing this printing here, 
-//since couldn't get ft_putstr to work.. Gotta investigate that more later..
 int	ft_print_hex(unsigned long int num, int lowercase)
 {
 	char	*ptr;
@@ -22,7 +21,7 @@ int	ft_print_hex(unsigned long int num, int lowercase)
 	int		res;
 	int		i;
 
-	i = ft_hex_len(num, 16);
+	i = ft_hex_len(num);
 	if (lowercase == 1)
 		ft_strcpy(representation, "0123456789abcdef");
 	else

@@ -14,9 +14,6 @@
 
 int	ft_print_args(char c, va_list args)
 {
-	unsigned int	i;
-
-	i = 1;
 	if (c == 'c')
 		return (ft_putchar(va_arg(args, int)));
 	else if (c == 's')

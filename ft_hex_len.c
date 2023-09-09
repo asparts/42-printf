@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 // returns hex length
-int	ft_hex_len(unsigned long int num, int base)
+int	ft_hex_len(unsigned long int num)
 {
 	char	*ptr;
 	char	buffer[50];
