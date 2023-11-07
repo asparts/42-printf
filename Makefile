@@ -1,4 +1,4 @@
-CC	=	gcc
+CC	=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 NAME	=	libftprintf.a
 SRCS	=	ft_printf.c ft_putchr.c ft_putstr.c ft_print_args.c ft_strcpy.c ft_print_int.c ft_print_hex.c ft_print_unsigned.c ft_print_ptr.c ft_memcpy.c ft_strlen.c ft_hex_len.c
