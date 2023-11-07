@@ -6,7 +6,7 @@
 /*   By: mnummi <mnummi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 00:41:57 by mnummi            #+#    #+#             */
-/*   Updated: 2023/07/27 08:42:43 by mnummi           ###   ########.fr       */
+/*   Updated: 2023/11/07 20:37:23 by mnummi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-	char	*ptr;
+	int	i;
 
+	i = 0;
 	if (!dest)
 		return (NULL);
-	ptr = dest;
-	while (*src != '\0')
+	while (src[i] != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i] = src[i];
+		i++;
 	}
-	dest = '\0';
-	return (ptr);
+	dest[i] = '\0';
+	return (dest);
 }
