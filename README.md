@@ -65,20 +65,21 @@ Run your program: <br>
 ./my_program <br>
 
 🧪 Example
-#include "ft_printf.h" <br>
+```
+#include "ft_printf.h"
 
-int main(void) <br>
-{ <br>
-    ft_printf("Character: %c\n", 'A'); <br>
-    ft_printf("String: %s\n", "Hello, World!"); <br>
-    ft_printf("Pointer: %p\n", (void *)0x12345678); <br>
-    ft_printf("Decimal: %d\n", 42); <br>
-    ft_printf("Unsigned: %u\n", 42); <br>
-    ft_printf("Hexadecimal: %x\n", 42); <br>
-    ft_printf("Percent Sign: %%\n"); <br>
-    return 0; <br>
-} <br>
-
+int main(void)
+{
+    ft_printf("Character: %c\n", 'A');
+    ft_printf("String: %s\n", "Hello, World!");
+    ft_printf("Pointer: %p\n", (void *)0x12345678);
+    ft_printf("Decimal: %d\n", 42);
+    ft_printf("Unsigned: %u\n", 42);
+    ft_printf("Hexadecimal: %x\n", 42);
+    ft_printf("Percent Sign: %%\n");
+    return 0;
+}
+```
 ### 📝 Notes <br>
 ❌ This implementation does not support flags, width, precision, or length modifiers. <br>
 
